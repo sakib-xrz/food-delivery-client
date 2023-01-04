@@ -15,17 +15,32 @@ const Navbar = () => {
           <img src={Logo} alt="" />
         </Link>
         <div className="menu-items">
-          <ul className={isOpen ? "nav-links-mobile" : "nav-links"}>
-            <NavLink to={"/home"}>
+          <ul className="nav-links">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "nav-link-active" : "nav-link"
+              }
+              to={"/home"}
+            >
               <li>Home</li>
             </NavLink>
-            <NavLink to={"/menu"}>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "nav-link-active" : "nav-link"
+              }
+              to={"/menu"}
+            >
               <li>Menu</li>
             </NavLink>
-            <NavLink to={"/orders"}>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "nav-link-active" : "nav-link"
+              }
+              to={"/orders"}
+            >
               <li>My Orders</li>
             </NavLink>
-            <button className="login">Log In</button>
+            <Link className="login">Log In</Link>
           </ul>
         </div>
         <button className="mobile-menu">
@@ -39,6 +54,37 @@ const Navbar = () => {
               onClick={() => setIsOpen(true)}
               className="bar-open"
             />
+          )}
+          {isOpen && (
+            <ul className="nav-links-mobile">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link-mobile-active" : "nav-link-mobile"
+                }
+                to={"/home"}
+              >
+                <li onClick={() => setIsOpen(false)}>Home</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link-mobile-active" : "nav-link-mobile"
+                }
+                to={"/menu"}
+              >
+                <li onClick={() => setIsOpen(false)}>Menu</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link-mobile-active" : "nav-link-mobile"
+                }
+                to={"/orders"}
+              >
+                <li onClick={() => setIsOpen(false)}>My Orders</li>
+              </NavLink>
+              <Link onClick={() => setIsOpen(false)} className="login-mobile">
+                Log In
+              </Link>
+            </ul>
           )}
         </button>
       </div>
