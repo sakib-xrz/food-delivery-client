@@ -40,7 +40,9 @@ const Navbar = () => {
             >
               <li>My Orders</li>
             </NavLink>
-            <Link className="login">Log In</Link>
+            <Link to={"/login"} className="login">
+              Log In
+            </Link>
           </ul>
         </div>
         <button className="mobile-menu">
@@ -81,7 +83,11 @@ const Navbar = () => {
               >
                 <li onClick={() => setIsOpen(false)}>My Orders</li>
               </NavLink>
-              <Link onClick={() => setIsOpen(false)} className="login-mobile">
+              <Link
+                to={"/login"}
+                onClick={() => setIsOpen(false)}
+                className="login-mobile"
+              >
                 Log In
               </Link>
             </ul>
