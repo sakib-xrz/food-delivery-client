@@ -5,9 +5,22 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { VscThreeBars } from "react-icons/vsc";
 import { VscChromeClose } from "react-icons/vsc";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthProvider";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, logout } = useContext(AuthContext);
+
+  const signOut = () => {
+    logout()
+      .then(() => {
+        toast.success("Logout successful", { duration: 3000 });
+      })
+      .catch((err) => console.error(err));
+  };
+
   return (
     <nav>
       <div className="nav">
@@ -32,9 +45,15 @@ const Navbar = () => {
             >
               <li>Cart</li>
             </NavLink>
-            <Link to={"/login"} className="login">
-              Log In
-            </Link>
+            {user?.uid ? (
+              <Link onClick={signOut} className="login">
+                Logout
+              </Link>
+            ) : (
+              <Link to={"/login"} className="login">
+                Log In
+              </Link>
+            )}
           </ul>
         </div>
         <button className="mobile-menu">
@@ -67,13 +86,19 @@ const Navbar = () => {
               >
                 <li onClick={() => setIsOpen(false)}>Cart</li>
               </NavLink>
-              <Link
-                to={"/login"}
-                onClick={() => setIsOpen(false)}
-                className="login-mobile"
-              >
-                Log In
-              </Link>
+              {user?.uid ? (
+                <Link onClick={signOut} className="login-mobile">
+                  Logout
+                </Link>
+              ) : (
+                <Link
+                  to={"/login"}
+                  onClick={() => setIsOpen(false)}
+                  className="login-mobile"
+                >
+                  Log In
+                </Link>
+              )}
             </ul>
           )}
         </button>

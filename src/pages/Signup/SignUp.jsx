@@ -1,17 +1,24 @@
 import React from "react";
 import "./SignUp.css";
-import SmallSpinner from "../../components/Spinner/SmallSpinner/SmallSpinner"
+import SmallSpinner from "../../components/Spinner/SmallSpinner/SmallSpinner";
 import { AiOutlineUser } from "react-icons/ai";
 import { SlEnvolope } from "react-icons/sl";
 import { SlLock } from "react-icons/sl";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthProvider";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
   const [isVisible, setIsVisible] = useState(false);
   const [error, setError] = useState(false);
+  const { createUser, updateUserName, loading, setLoading } =
+    useContext(AuthContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -19,7 +26,23 @@ const SignUp = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
+
+    createUser(email, password)
+      .then((res) => {
+        updateUserName(name).then(() => {
+          setLoading(false);
+          toast.success("Account Create Successfully, Please Login", {
+            duration: 3000,
+          });
+          setTimeout(navigate("/login"), 3000);
+        });
+      })
+      .catch((err) => {
+        toast.error(err.message, {
+          duration: 3000,
+        });
+        console.error(err);
+      });
   };
 
   const handlePassword = (e) => {
@@ -127,12 +150,11 @@ const SignUp = () => {
           <small className="error">{error}</small>
           {error ? (
             <button type="submit" className="login-btn-disabled" disabled>
-              {/* Sign Up */}
-              <SmallSpinner />
+              Sign Up
             </button>
           ) : (
             <button type="submit" className="login-btn">
-              Sign Up
+              {loading ? <SmallSpinner /> : "Sign Up"}
             </button>
           )}
         </form>

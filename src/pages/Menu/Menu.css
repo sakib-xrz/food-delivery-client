@@ -15,6 +15,16 @@
   margin-bottom: 2rem;
 }
 
+/* responsive for large device */
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+  .card-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 /* responsive for medium device */
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
