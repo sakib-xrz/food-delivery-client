@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -14,12 +14,16 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 :root {
-  --color-primary: #F88767;
+  --color-primary: #f88767;
   --color-white: #fff;
   --color-dark: #333;
   --transition: all 400ms ease;
@@ -29,18 +33,18 @@ body{
   --container-width-sm: 95%;
 }
 
-h1{
+h1 {
   font-size: 3rem;
   color: var(--color-dark);
   font-weight: 700;
 }
 
-h3{
+h3 {
   color: var(--color-dark);
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
