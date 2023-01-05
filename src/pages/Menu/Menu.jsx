@@ -1,11 +1,19 @@
 import React from 'react';
+import Card from "../../components/Card/Card";
+import "./Menu.css"
 
 const Menu = () => {
-    return (
-      <div>
-        <h1>This is Menu page</h1>
-      </div>
-    );
+        return (
+          <div className="container">
+            <h1>This is Home page</h1>
+            <div className="card-div">
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+            </div>
+          </div>
+        );
 };
 
 export default Menu;

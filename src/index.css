@@ -32,4 +32,11 @@ body{
 h1{
   font-size: 3rem;
   color: var(--color-dark);
+  font-weight: 700;
+}
+
+h3{
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  font-weight: 600;
 }

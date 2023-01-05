@@ -1,0 +1,98 @@
+[
+  {
+    "category": "pizza",
+    "name": "BBQ Chicken - HC",
+    "description": "BBQ Chicken, Green Chilies, sweet Corn",
+    "rating": "4.8",
+    "price": "389",
+    "img": "https://i.ibb.co/vD1Qq1N/BBQ-Chicken.jpg"
+  },
+  {
+    "category": "pizza",
+    "name": "Smoky Grilled Buzz - HC",
+    "description": "Smoked Chicken, Mushroom, Onion, Red Paprika",
+    "rating": "4.9",
+    "price": "389",
+    "img": "https://i.ibb.co/Brg6kWP/Smoky-Grilled-Buzz.jpg"
+  },
+  {
+    "category": "pizza",
+    "name": "Chicken Classic - HC",
+    "description": "Spicy Chicken, Capsicum, Onions, Mushroom, Tomatoes, Black Olives",
+    "rating": "4.6",
+    "price": "439",
+    "img": "https://i.ibb.co/Tttgp0Y/Chicken-Classic.jpg"
+  },
+  {
+    "category": "pizza",
+    "name": "BBQ Temptation - HC",
+    "description": "BBQ Chicken, Tomatoes, Capsicum, Onion, Green Chilies",
+    "rating": "4.7",
+    "price": "439",
+    "img": "https://i.ibb.co/CKZgqpf/BBQ-Temptation.jpg"
+  },
+  {
+    "category": "pizza",
+    "name": "Chicken Delight (S.C)",
+    "description": "Lebanese chicken, chicken sausage, capsicum, tomatoes, jalapenos, black olives.",
+    "rating": "4.9",
+    "price": "1529",
+    "img": "https://i.ibb.co/0Bk25h4/Chicken-Delight.jpg"
+  },
+  {
+    "category": "pizza",
+    "name": "Beef Lovers (S.C)",
+    "description": "Beef, onions, black olives, capsicum.",
+    "rating": "4.8",
+    "price": "1419",
+    "img": "https://i.ibb.co/V9Zk5Mw/Beef-Lovers.jpg"
+  },
+  {
+    "category": "pasta",
+    "name": "Baked-Chicken Arabiatta",
+    "description": "Pasta coated with arabiatta sauce,chicken chunk & baked to a cheesy consistency.",
+    "rating": "4.5",
+    "price": "529",
+    "img": "https://i.ibb.co/SBsCP3T/Baked-Chicken-Arabiatta.jpg"
+  },
+  {
+    "category": "pasta",
+    "name": "Baked-Chicken Mushroom",
+    "description": "Pasta coated with creamy chicken mushroom sauce & baked to a cheesy consistency.",
+    "rating": "4.8",
+    "price": "639",
+    "img": "https://i.ibb.co/5F5Q0qJ/Baked-Chicken-Mushroom.jpg"
+  },
+  {
+    "category": "appetizers",
+    "name": "Baked Potato Wedges",
+    "description": "Crisp & savoury potato wedges served with dipping sauces.",
+    "rating": "4.4",
+    "price": "289",
+    "img": "https://i.ibb.co/JkHmPmF/Baked-Potato-Wedges.jpg"
+  },
+  {
+    "category": "appetizers",
+    "name": "Spicy Garlic Mushrooms",
+    "description": "Button mushrooms lightly sauteed in a blend of herbs & spice garlic.",
+    "rating": "4.6",
+    "price": "509",
+    "img": "https://i.ibb.co/23BbvM7/Spicy-Garlic-Mushrooms.jpg"
+  },
+  {
+    "category": "appetizers",
+    "name": "Cheesy Garlic Sticks",
+    "description": "Breadsticks with hot melting cheese on top.",
+    "rating": "4.9",
+    "price": "229",
+    "img": "https://i.ibb.co/yYLCHK7/Cheesy-Garlic-Sticks.jpg"
+  },
+  {
+    "category": "appetizers",
+    "name": "Garlic bread with cheese",
+    "description": "Hot Garlic Bread topped with Mozzarella Cheese.",
+    "rating": "4.8",
+    "price": "309",
+    "img": "https://i.ibb.co/pXkvsBR/Garlic-bread-with-cheese.jpg"
+  }
+]

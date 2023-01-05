@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <div className="container">
+    <div className="box">
       <div className="form-container log-in-container">
         <form>
           <h1>Log In</h1>

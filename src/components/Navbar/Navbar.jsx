@@ -20,14 +20,6 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive ? "nav-link-active" : "nav-link"
               }
-              to={"/home"}
-            >
-              <li>Home</li>
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "nav-link-active" : "nav-link"
-              }
               to={"/menu"}
             >
               <li>Menu</li>
@@ -36,9 +28,9 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive ? "nav-link-active" : "nav-link"
               }
-              to={"/orders"}
+              to={"/cart"}
             >
-              <li>My Orders</li>
+              <li>Cart</li>
             </NavLink>
             <Link to={"/login"} className="login">
               Log In
@@ -63,14 +55,6 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive ? "nav-link-mobile-active" : "nav-link-mobile"
                 }
-                to={"/home"}
-              >
-                <li onClick={() => setIsOpen(false)}>Home</li>
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "nav-link-mobile-active" : "nav-link-mobile"
-                }
                 to={"/menu"}
               >
                 <li onClick={() => setIsOpen(false)}>Menu</li>
@@ -79,9 +63,9 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive ? "nav-link-mobile-active" : "nav-link-mobile"
                 }
-                to={"/orders"}
+                to={"/cart"}
               >
-                <li onClick={() => setIsOpen(false)}>My Orders</li>
+                <li onClick={() => setIsOpen(false)}>Cart</li>
               </NavLink>
               <Link
                 to={"/login"}

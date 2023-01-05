@@ -11,13 +11,16 @@ const SignUp = () => {
       const [isVisible, setIsVisible] = useState(false);
 
     return (
-      <div className="container">
+      <div className="box">
         <div className="form-container log-in-container">
           <form>
             <h1>Sign Up</h1>
             <small className="toggle-page">
               Already have an account?
-              <Link to={"/login"} className="toggle-button"> Log In</Link>
+              <Link to={"/login"} className="toggle-button">
+                {" "}
+                Log In
+              </Link>
             </small>
             <div className="form-div">
               <div className="single-input">
