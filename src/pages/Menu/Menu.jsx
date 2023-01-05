@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from "../../components/Card/Card";
+import SmallSpinner from '../../components/Spinner/SmallSpinner/SmallSpinner';
 import "./Menu.css"
 
 const Menu = () => {
@@ -12,6 +13,7 @@ const Menu = () => {
               <Card />
               <Card />
             </div>
+            <SmallSpinner />
           </div>
         );
 };
