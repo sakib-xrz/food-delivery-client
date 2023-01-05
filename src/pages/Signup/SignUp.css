@@ -4,17 +4,17 @@
   margin-top: -0.5rem;
 }
 
-.login-btn-disabled{
-    background: #f8876796;
-    border: 1px solid #f8876796;
-    color: var(--color-white);
-    padding: 0.6rem 3rem;
-    border-radius: 0.2rem;
-    font-size: 1.2rem;
-    margin: 1rem 0;
+.login-btn-disabled {
+  background: #f8876796;
+  border: none;
+  color: var(--color-white);
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  margin: 1rem 0;
 }
 
-.login-btn-disabled:hover{
-    cursor: not-allowed;
+.login-btn-disabled:hover {
+  cursor: not-allowed;
 }
-

@@ -1,18 +1,10 @@
 import React from 'react';
-import { ColorRing } from "react-loader-spinner";
+import "./SmallSpinner.css"
 
 const SmallSpinner = () => {
     return (
-      <div>
-        <ColorRing
-          visible={true}
-          height="80"
-          width="80"
-          ariaLabel="blocks-loading"
-          wrapperStyle={{}}
-          wrapperClass="blocks-wrapper"
-          colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
-        />
+      <div className="spinner-div flex justify-center items-center h-full">
+        <div className="small-spinner w-6 h-6 border-2 border-dashed rounded-full animate-spin border-white"></div>
       </div>
     );
 };

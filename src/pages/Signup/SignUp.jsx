@@ -1,5 +1,6 @@
 import React from "react";
 import "./SignUp.css";
+import SmallSpinner from "../../components/Spinner/SmallSpinner/SmallSpinner"
 import { AiOutlineUser } from "react-icons/ai";
 import { SlEnvolope } from "react-icons/sl";
 import { SlLock } from "react-icons/sl";
@@ -126,7 +127,8 @@ const SignUp = () => {
           <small className="error">{error}</small>
           {error ? (
             <button type="submit" className="login-btn-disabled" disabled>
-              Sign Up
+              {/* Sign Up */}
+              <SmallSpinner />
             </button>
           ) : (
             <button type="submit" className="login-btn">
