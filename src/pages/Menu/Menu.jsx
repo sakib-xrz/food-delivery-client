@@ -9,7 +9,7 @@ const Menu = () => {
   const [loading, setLoading] = useState(true);
   const [foods, setFoods] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/foods")
+    fetch("http://localhost:5000/foods/all")
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);

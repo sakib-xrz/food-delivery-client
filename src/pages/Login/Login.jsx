@@ -10,6 +10,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import toast from "react-hot-toast";
 import SmallSpinner from "../../components/Spinner/SmallSpinner/SmallSpinner";
+import { setUser } from "../../hooks/setUser";
 
 const Login = () => {
   const { signIn, loading, setLoading } = useContext(AuthContext);
@@ -26,6 +27,7 @@ const Login = () => {
 
     signIn(email, password)
       .then((res) => {
+        setUser(res.user)
         authToken(res.user);
         setLoading(false);
         form.reset();

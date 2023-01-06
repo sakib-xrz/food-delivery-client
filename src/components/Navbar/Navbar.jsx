@@ -33,18 +33,30 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive ? "nav-link-active" : "nav-link"
               }
-              to={"/menu"}
+              to={"/home"}
             >
-              <li>Menu</li>
+              <li>Home</li>
             </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "nav-link-active" : "nav-link"
-              }
-              to={"/cart"}
-            >
-              <li>Cart</li>
-            </NavLink>
+            {user?.uid && (
+              <>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link-active" : "nav-link"
+                  }
+                  to={"/menu"}
+                >
+                  <li>Menu</li>
+                </NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link-active" : "nav-link"
+                  }
+                  to={"/cart"}
+                >
+                  <li>Cart</li>
+                </NavLink>
+              </>
+            )}
             {user?.uid ? (
               <Link onClick={signOut} className="login">
                 Logout
@@ -74,18 +86,30 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive ? "nav-link-mobile-active" : "nav-link-mobile"
                 }
-                to={"/menu"}
+                to={"/home"}
               >
-                <li onClick={() => setIsOpen(false)}>Menu</li>
+                <li onClick={() => setIsOpen(false)}>Home</li>
               </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "nav-link-mobile-active" : "nav-link-mobile"
-                }
-                to={"/cart"}
-              >
-                <li onClick={() => setIsOpen(false)}>Cart</li>
-              </NavLink>
+              {user?.uid && (
+                <>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link-mobile-active" : "nav-link-mobile"
+                    }
+                    to={"/menu"}
+                  >
+                    <li onClick={() => setIsOpen(false)}>Menu</li>
+                  </NavLink>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link-mobile-active" : "nav-link-mobile"
+                    }
+                    to={"/cart"}
+                  >
+                    <li onClick={() => setIsOpen(false)}>Cart</li>
+                  </NavLink>
+                </>
+              )}
               {user?.uid ? (
                 <Link onClick={signOut} className="login-mobile">
                   Logout
