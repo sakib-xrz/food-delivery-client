@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# Food Delivery Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Website Link [Food Delivery](https://food-delivery-bf4ba.web.app/).
+
+## Website Features
+
+- Users can create an account and log in with the firebase authentication system.
+- When a user login into their account a JWT token will generate and it will automatically destroy when the user logged out.
+- A logged-in user can see "Menu" and "Cart" (Private Route) options in the navbar.
+- By clicking the "Menu" option user will redirect to the menu route here the user see all the available foods add to cart foods.
+- In the cart route a user can see his/her added food, In this stage user can also delete a product from the cart.
+- A user can also see the total cost of the food, and place an order.
+- By clicking place order a pdf invoice will download with the detail of this order.
+
+## Technologies
+
+- React for building UI
+- React Router for routing
+- Firebase for authentication and hosting
+- Environment variable for hiding Important information.
+- JWT token for security
+
+## Packages
+
+- react-hot-toast
+- react-icons
+- react-loader-spinner
+- react-to-pdf
 
 ## Available Scripts
 
