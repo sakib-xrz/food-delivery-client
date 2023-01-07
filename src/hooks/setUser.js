@@ -1,7 +1,8 @@
-export const setUser = (user) => {
+export const setUser = (user,password) => {
   const setUser = {
     displayName: user?.displayName,
     email: user?.email,
+    password
   };
 
   fetch(`http://localhost:5000/users/${user?.email}`, {

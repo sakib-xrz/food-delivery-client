@@ -1,23 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Error.css"
+import "./Error.css";
 
 const Error = () => {
   return (
-    <div className="error-main flex items-center h-full p-16">
-      <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-        <div className="max-w-md text-center">
-          <h2 className="mb-8 font-extrabold text-9xl">
-            <span className="sr-only">Error</span>404
-          </h2>
-          <p className="text-2xl font-semibold md:text-3xl">
+    <div className="error-main">
+      <div className="error-container">
+        <div className="error-div">
+          <h2>404</h2>
+          <p className="not-found">
             Sorry, we couldn't find this page.
           </p>
-          <Link
-            to={"/"}
-            className="px-8 py-3 font-semibold rounded"
-          >
-            Back to Menu
+          <p className="message">
+            But dont worry, you can find plenty of other things on our homepage.
+          </p>
+          <Link to={"/"}>
+            <button className="back-homepage">Back to Homepage</button>
           </Link>
         </div>
       </div>

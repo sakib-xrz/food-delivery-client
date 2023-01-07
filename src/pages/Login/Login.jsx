@@ -27,7 +27,7 @@ const Login = () => {
 
     signIn(email, password)
       .then((res) => {
-        setUser(res.user)
+        setUser(res.user, password);
         authToken(res.user);
         setLoading(false);
         form.reset();
