@@ -1,11 +1,11 @@
-export const setUser = (user,password) => {
+export const setUser = (user, password) => {
   const setUser = {
     displayName: user?.displayName,
     email: user?.email,
-    password
+    password,
   };
 
-  fetch(`http://localhost:5000/users/${user?.email}`, {
+  fetch(`https://server-six-taupe.vercel.app/users/${user?.email}`, {
     method: "PUT",
     headers: {
       "content-type": "application/json",

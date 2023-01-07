@@ -6,9 +6,8 @@ import toast from "react-hot-toast";
 import { AuthContext } from "../../context/AuthProvider";
 
 const Card = ({ food }) => {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const setCart = (selectedFood) => {
-
     const cart = {
       customerName: user?.displayName,
       customerEmail: user?.email,
@@ -16,9 +15,9 @@ const Card = ({ food }) => {
       foodName: selectedFood?.name,
       foodImg: selectedFood?.img,
       foodPrice: selectedFood?.price,
-      foodCategory: selectedFood?.category
+      foodCategory: selectedFood?.category,
     };
-    fetch("http://localhost:5000/cart", {
+    fetch("https://server-six-taupe.vercel.app/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

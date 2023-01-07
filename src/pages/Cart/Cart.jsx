@@ -20,7 +20,7 @@ const Cart = () => {
     queryKey: ["myCart", user?.email],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/cart?email=${user?.email}`,
+        `https://server-six-taupe.vercel.app/cart?email=${user?.email}`,
         {
           headers: {
             authorization: `Bearer ${localStorage.getItem("user-token")}`,
@@ -46,7 +46,7 @@ const Cart = () => {
   const total = calculateTotal(myCart);
 
   const handleDelete = (singleItem) => {
-    fetch(`http://localhost:5000/cart/${singleItem?._id}`, {
+    fetch(`https://server-six-taupe.vercel.app/cart/${singleItem?._id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

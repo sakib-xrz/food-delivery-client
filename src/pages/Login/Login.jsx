@@ -45,7 +45,7 @@ const Login = () => {
   };
 
   const authToken = (user) => {
-    fetch(`http://localhost:5000/jwt`, {
+    fetch(`https://server-six-taupe.vercel.app/jwt`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

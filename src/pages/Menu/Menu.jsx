@@ -10,7 +10,7 @@ const Menu = () => {
   const [loading, setLoading] = useState(true);
   const [foods, setFoods] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/foods/all")
+    fetch("https://server-six-taupe.vercel.app/foods/all")
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);
