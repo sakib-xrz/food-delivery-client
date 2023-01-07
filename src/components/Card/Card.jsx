@@ -1,8 +1,40 @@
 import React from "react";
 import "./Card.css";
 import star from "../../assets/images/star.png";
+import { useContext } from "react";
+import toast from "react-hot-toast";
+import { AuthContext } from "../../context/AuthProvider";
 
 const Card = ({ food }) => {
+  const {user} = useContext(AuthContext)
+  const setCart = (selectedFood) => {
+
+    const cart = {
+      customerName: user?.displayName,
+      customerEmail: user?.email,
+      foodId: selectedFood?._id,
+      foodName: selectedFood?.name,
+      foodImg: selectedFood?.img,
+      foodPrice: selectedFood?.price,
+      foodCategory: selectedFood?.category
+    };
+    fetch("http://localhost:5000/cart", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cart),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          toast.success("Item added");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
   const { category, name, description, rating, price, img } = food;
   return (
     <div className="card-main">
@@ -12,7 +44,7 @@ const Card = ({ food }) => {
         </div>
         <div className="card-content">
           <h3>{name}</h3>
-          <p>{description.slice(0,35)}...</p>
+          <p>{description.slice(0, 35)}...</p>
           <div className="price-rating">
             <div>
               <h5>Rating: &nbsp;</h5>
@@ -29,7 +61,7 @@ const Card = ({ food }) => {
             </div>
           </div>
         </div>
-        <div className="card-footer">
+        <div onClick={() => setCart(food)} className="card-footer">
           <span>Add to cart</span>
         </div>
       </div>

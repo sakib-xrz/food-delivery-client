@@ -17,7 +17,7 @@ const Footer = () => {
           Restaurant Food and Takeaway Delivered. Find restaurants or foods
           delivering right now, near you.
         </p>
-        <small class="copyright-text">
+        <small className="copyright-text">
           Copyright &copy; 2017 All Rights Reserved by <br/>
           <a
             target={"_blank"}

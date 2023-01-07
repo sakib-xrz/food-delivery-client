@@ -13,6 +13,7 @@ import SmallSpinner from "../../components/Spinner/SmallSpinner/SmallSpinner";
 import { setUser } from "../../hooks/setUser";
 
 const Login = () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   const { signIn, loading, setLoading } = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -105,9 +106,6 @@ const Login = () => {
                 </span>
               )}
             </div>
-            <small className="forgot-password">
-              <Link>Forgotten password?</Link>
-            </small>
           </div>
           <button type="submit" className="login-btn">
             {loading ? <SmallSpinner /> : "Log In"}

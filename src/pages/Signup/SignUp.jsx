@@ -13,6 +13,7 @@ import { AuthContext } from "../../context/AuthProvider";
 import toast from "react-hot-toast";
 
 const SignUp = () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   const navigate = useNavigate();
 
   const [isVisible, setIsVisible] = useState(false);

@@ -4,7 +4,6 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
   signInWithEmailAndPassword,
-  sendPasswordResetEmail,
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
@@ -37,13 +36,7 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  //4. Reset Password
-  const resetPassword = (email) => {
-    setLoading(true);
-    return sendPasswordResetEmail(auth, email);
-  };
-
-  // 5. Logout
+  // 4. Logout
   const logout = () => {
     localStorage.removeItem("user-token");
     setLoading(true);
@@ -66,7 +59,6 @@ const AuthProvider = ({ children }) => {
     createUser,
     updateUserName,
     signIn,
-    resetPassword,
     logout,
     loading,
     setLoading,

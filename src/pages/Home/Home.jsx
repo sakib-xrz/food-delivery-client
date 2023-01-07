@@ -5,6 +5,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   const [loading, setLoading] = useState(true);
   const [foods, setFoods] = useState([]);
   useEffect(() => {

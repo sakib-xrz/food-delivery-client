@@ -6,6 +6,7 @@ import LargeSpinner from "../../components/Spinner/LargeSpinner/LargeSpinner";
 import "./Menu.css";
 
 const Menu = () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   const [loading, setLoading] = useState(true);
   const [foods, setFoods] = useState([]);
   useEffect(() => {
